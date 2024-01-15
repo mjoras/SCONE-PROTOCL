@@ -1,4 +1,4 @@
-Video traffic is already 70% of all traffic on the Internet and is expected to grow to 80% by 2028. Both in developed and emerging markets video traffic forms 50-80% of traffic on mobile networks. New formats like short form videos have seen tremendous growth in recent years. These growth trends are likely to increase with new populations coming online on mobile-first markets.
+Video traffic is already 70% of the overall traffic volume on the Internet and is expected to grow to 80% by 2028. Both in developed and emerging markets video traffic forms 50-80% of traffic volume on mobile networks. New formats like short form videos have seen tremendous growth in recent years. These growth trends are likely to increase with new populations coming online on mobile-first markets.
 
 While mobile network operators contineously invest in network resources, including deplyoment of new generations on new bands, spectrum is limited. To address this challenge, sepcially when the network is highly loaded, operators often make use of flow-based traffic handling such shaping of video traffic. 
 
