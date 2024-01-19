@@ -15,7 +15,7 @@ The properies of this mechanism are as follows:
 
 Milestones
 - WG Adoption of SCONEPRO Protocol draft
-- WG Adoption of SCONEPRO Protocol Usage draft (describing for network-assisted video optimization through self-adaptation) draft
+- WG Adoption of SCONEPRO Protocol Usage draft (describing for network-assisted video optimization through self-adaptation)
 - WG Adoption of SCONEPRO Protocol applicability draft
 - WG Adoption of SCONEPRO Protocol Manageability draft
 - Publication requested for SCONEPRO Protocol draft as Proposed Standard
