@@ -13,8 +13,8 @@ The properies of this mechanism are as follows:
 3. Associativity with an application. The network properties must be associated with a given application traversing the network, for example a video playback.
 4. Scalability. The mechanism must be scalable and implementable by Internet infrastructure as it exists today, for example mobile network packet cores.
 
-Milestones
-- Publication requested for SCONEPRO Protocol draft as Proposed Standard
-- Publication requested for SCONEPRO Protocol Usage draft as Proposed Standard
-- Publication requested for SCONEPRO Protocol applicability draft as Informational
-- Publication requested for SCONEPRO Protocol Manageability draft as Informational
+The proposed deliverables for SCONEPRO are as follows:
+
+1. SCONEPRO Protocol specification - this specification describes normative aspects of the SCONEPRO protocol itself. It is to be a standards-track specification, targeting protocol developers.
+2. SCONEPRO Protocol Usage specification - this specification describes how a video application can use a SCONEPRO service to perform video self-adaptation based on feedback from the network. It is to be an informational specification, targeting video application developers. This specification is distinct from the SCONEPRO Protocol specification because the contents will be guidance, not normative behaviors, and because we expect recommended guidance to change as we gain experience with SCONEPRO, and as video streams and netwworks evolve over time.  
+3. SCONEPRO Protocol Applicability and Protocol Manageability specification - this specification provides guidance to operators making the decision to offer a SCONEPRO service in their networks, and provides assistance to operators as they tune and troubleshoot a SCONEPRO service. It is to be an informational specification. 
