@@ -9,7 +9,7 @@ The Secure Communication of Network Properties (SCONE-PRO) Working Group's prima
 The properies of this mechanism are as follows:
 
 1. On-path establishment. That is, no off-path element is needed to establish the communication channel between the entity communicating the properies and the client.
-2. Network-to-client. The communication channel is used to communicate network properties to clients. Communication of client properties to the network would be out of scope. 
+2. Network-to-client. The communication channel is used to communicate network properties to clients. Communication of network properties to servers would be out of scope. 
 3. Security. The mechanism must ensure the confidentiality, integrity, and authenticity of the communication. The mechanism must have independent security context from the application's security context. The group must not define new security mechanisms for this purpose.
 4. Associativity with an application. The network properties must be associated with a given application traversing the network, for example a video playback.
 5. Scalability. The mechanism must be scalable and implementable by Internet infrastructure as it exists today, for example mobile network packet cores.
