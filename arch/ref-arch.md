@@ -16,12 +16,15 @@
 Notes: 
 
 * The client requests video content from a Content and Application Provider (CAP).
+* The client provides application-level feedback to the CAP Server.
+   * This feedback is often based on heuristics (DASH, HLS, etc.)
+   * The client is not aware of network conditions on the path toward the client.
 * The Communication Service Provider (CSP) attempts to detect and shape incoming video traffic, based on user data plans.
-* Detection and shaping are often based on heuristics, because the CSP isn't aware of the the details of the client's requests for video traffic from the CAP. 
-* As more and more Internet traffic becomes increasingly encrypted end-to-end, the CSP becomes increasingly unaware of these details, and increasingly reliant on heuristics. 
-* Traffic shaping based on heuristics is likely to be suboptimal, especially in cases where the client's access network is wireless, with its own rapid changes in available bandwidth.
+   * Detection and shaping are often based on heuristics, because the CSP isn't aware of the the details of the client's requests for video traffic from the CAP. 
+   * As more and more Internet traffic becomes increasingly encrypted end-to-end, the CSP becomes increasingly unaware of these details, and increasingly reliant on heuristics. 
+   * Traffic shaping based on heuristics is likely to be suboptimal, especially in cases where the client's access network is wireless, with its own rapid changes in available bandwidth.
 * Because the CAP is aware that its traffic is being shaped in suboptimal ways, the CAP may design its own algorithms to detect and compensate for traffic shapers, but the CAP isn't aware of the details of the CSP's detection and traffic shaper deployment.
-* The combination of CSP traffic shaping and CAP responses to traffic shaping leads to unpredictable path behavior, and unpredictable path behavior confuses bandwidth estimation and congestion control procedures used for video delivery sessions. The end result is poor quality of experience for the end user. 
+   * The combination of CSP traffic shaping and CAP responses to traffic shaping leads to unpredictable path behavior, and unpredictable path behavior confuses bandwidth estimation and congestion control procedures used for video delivery sessions. The end result is poor quality of experience for the end user. 
 * As the CSP and CAP fumble in the dark to compensate for unpredictable responses from each other, they incur additional costs. For instance, the CSP must perform traffic detection and shaping for every flow, and this is compute-intensive. 
 
 ## One way SCONEPRO could work
