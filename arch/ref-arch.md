@@ -16,9 +16,9 @@
 Notes: 
 
 * The client requests video content from a Content and Application Provider (CAP).
-* The client provides application-level feedback to the CAP Server.
-   * This feedback is often based on heuristics (DASH, HLS, etc.)
+* The client provides application-level feedback to the CAP Server. (DASH, HLS, etc.)
    * The client is not aware of network conditions on the path toward the client.
+   * This feedback is based on heuristics.
 * The Communication Service Provider (CSP) attempts to detect and shape incoming video traffic, based on user data plans.
    * Detection and shaping are often based on heuristics, because the CSP isn't aware of the the details of the client's requests for video traffic from the CAP. 
    * As more and more Internet traffic becomes increasingly encrypted end-to-end, the CSP becomes increasingly unaware of these details, and increasingly reliant on heuristics. 
@@ -37,31 +37,35 @@ This diagram omits a lot of detail, and there are other ways that SCONEPRO could
   |           | Opt-in |
   |           +---+----+                
   | (a)           |  (b)
-  |           +---v-----+ 
-  |           | Shaping |
-  |   +-------+ Guidance| <------+
-  |   |       +---------+        |
-  |   |                          | (c)        ----- 
-  |   | (d)      ------          |           (     )              
-  |   |         (      )     +---+-----+    (        )             
-+-+---v--+     ( Access )    | Traffic |   (    IP    )       +----------+
-| Client +----( Network  )---+ Shaper  +--(   Network  )------+  Server  |
-+--------+     (        )    +---------+   (          )       +----------+
-                (------)                    (        )         
-                                             (-----)           Content and 
+  |           +---v------+ 
+  |           | SCONEPRO |
+  |   +-------+ Guidance | <------+
+  |   |       +----------+        |
+  |   |                           | (c)         ----- 
+  |   | (d)      ------           |            (     )              
+  |   |         (      )      +---+-----+     (        )             
++-+---v--+     ( Access )     | SCONEPRO |   (    IP    )       +----------+
+| Client +----( Network  )----+ Monitor  +--(   Network  )------+  Server  |
++--------+     (        )     +----------+   (          )       +----------+
+                (------)                      (        )         
+                                                (-----)        Content and 
    Communication Service Provider                          Application Provider
  |---------------------------------------|                   |------------|
 ~~~~~~~~
 {: #withSP title="Video Traffic with SCONEPRO"}
 
+This example assumes a model where the client performs self-adaptation based on adaptation parameters provided by the CSP, that do not attempt to take advantage of client-specific capabilities. 
+
+Spencer's opinion is that including client-specific capabilities might improve the client experience in the short term, but minimizing the CSP's knowledge of client capabilities and relying on the client to conform to generic SCONEPRO guidance will make SCONEPRO less likely to ossify, since client adaptation behavior can change without requiring corresponding changes at the CSP.
+
 Notes: 
 
-* (a) The client opts in to the Communication Service Provider (CSP) SCONEPRO Service
-* (b) The CSP creates a shaping guidance control block for the client
+* (a) The client opts in to the Communication Service Provider (CSP) SCONEPRO Service.
+* (b) The CSP creates an initial SCONEPRO guidance control block for the client.
 * The client requests video content from a Content and Application Provider (CAP).
-* (c) The CSP's traffic shaper provides shaping guidance for the client 
-* (d) The client takes this shaping guidance into account when providing application-level feedback to the CAP Server
-* The CSP's traffic shaper observes whether the incoming packet stream conforms to the shaping guidance provided to the client.
-   * If the incoming packet stream conforms to that guidance, the traffic shaper takes no action
-   * If the incoming packet stream does not conform to that guidance, traffic shaping takes place as it would for any other packet stream.
+* (c) The CSP's SCONEPRO Monitor provides adaptation guidance for the client.
+* (d) The client takes this adaptation guidance into account when providing feedback to the CAP Server.
+* The CSP's SCONEPRO Monitor observes whether the client's incoming packet stream conforms to the adapation guidance provided to the client.
+   * If the incoming packet stream conforms to that guidance, the SCONEPRO Monitor takes no action.
+   * If the incoming packet stream does not conform to that guidance, the SCONEPRO Monitor takes action as it would for any other packet stream.
  
