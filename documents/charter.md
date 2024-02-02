@@ -11,5 +11,6 @@ The properies of this mechanism are as follows:
 1. On-path establishment. That is, no off-path element is needed to establish the communication channel between the entity communicating the properies and the client.
 2. Security. The mechanism must ensure the confidentiality, integrity, and authenticity of the communication. The mechanism must have independent security context from the application's security context. The group must not define new security mechanisms for this purpose.
 3. Associativity with an application. The network properties must be associated with a given application traversing the network, for example a video playback.
-4. Client initiatiion. The communication channel is initiated by a client device, just as the end to end application flows are also typically initiated by a client.
-5. Scalability. The mechanism must be scalable and implementable by Internet infrastructure as it exists today, for example mobile network packet cores.
+4. Client initiation. The communication channel is initiated by a client device, just as the end to end application flows are also typically initiated by a client.
+5. Optionality. The communication channel is strictly optional for the functioning of application flows. A client's application flow must function even if the client does not establish the channel.
+6. Scalability. The mechanism must be scalable and implementable by Internet infrastructure as it exists today, for example mobile network packet cores.
