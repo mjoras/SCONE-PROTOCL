@@ -7,9 +7,9 @@
 | Client +---( Network  )--+ Shaper  +--(   Network  )------+  Server  |
 +--------+    (        )   +---------+   (          )       +----------+
                (-----)                    (       )         
-                                           (-----)           Content and 
-   Communication Service Provider                       Application Provider
- |------------------------------------|                    |------------|
+                   Communication           (-----)           Content and 
+                  Service Provider                       Application Provider
+            |--------------------------|                    |------------|
 ~~~~~~~~
 {: #withoutSP title="Video Traffic without SCONEPRO"}
 
@@ -48,9 +48,9 @@ This diagram omits a lot of detail, and there are other ways that SCONEPRO could
 | Client +----( Network  )----+ Monitor  +--(   Network  )------+  Server  |
 +--------+     (        )     +----------+   (          )       +----------+
                 (------)                      (        )         
-                                                (-----)        Content and 
-   Communication Service Provider                          Application Provider
- |---------------------------------------|                   |------------|
+                   Communication           (-----)           Content and 
+                  Service Provider                       Application Provider
+             |-----------------------------|                   |-------------|
 ~~~~~~~~
 {: #withSP title="Video Traffic with SCONEPRO"}
 
@@ -61,11 +61,12 @@ Spencer's opinion is that including client-specific capabilities might improve t
 Notes: 
 
 * (a) The client opts in to the Communication Service Provider (CSP) SCONEPRO Service.
-* (b) The CSP creates an initial SCONEPRO guidance control block for the client.
+* (b) The CSP creates an initial SCONEPRO adaptation guidance control block for the client.
 * The client requests video content from a Content and Application Provider (CAP).
 * (c) The CSP's SCONEPRO Monitor provides adaptation guidance for the client.
 * (d) The client takes this adaptation guidance into account when providing feedback to the CAP Server.
 * The CSP's SCONEPRO Monitor observes whether the client's incoming packet stream conforms to the adapation guidance provided to the client.
    * If the incoming packet stream conforms to that guidance, the SCONEPRO Monitor takes no action.
    * If the incoming packet stream does not conform to that guidance, the SCONEPRO Monitor takes action as it would for any other packet stream.
+* The SCONEPRO Monitor doesn't need to detect video flows from a client using the SCONEPRO Service. It only needs to recognize that a client using the SCONEPRO service isn't self-adapting based on the SCONEPRO adaptation guidance.
  
