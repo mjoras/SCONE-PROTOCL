@@ -3,14 +3,14 @@ Both in developed and emerging markets video traffic forms 50-80% of traffic vol
 New formats like short form videos have seen tremendous growth in recent years.
 These growth trends are likely to increase with new populations coming online on mobile-first markets.
 
-While mobile network operators continuously invest in network resources, including deployment of new generations or new bands.
-Since spectrum is a limited and expensive resource operators often make use of flow-based traffic handling such as shaping of video traffic, specially when the network is highly loaded.
-Operators can not explicitly measure the degradation that shaping causes to end user quality of experience (QoE) making this approach open loop. 
+Mobile network operators continuously invest in network resources, including the deployment of new generations or new bands. 
+However, since spectrum is a limited and expensive resource, operators often employ flow-based traffic handling, such as the shaping of video traffic, especially when the network is highly loaded.
+Operators can not explicitly measure the degradation that shaping causes to end user quality of experience (QoE) making this approach an open loop. 
 
 Video traffic usually employs adaptive bitrate (ABR) schemes to dynamically adjust the video quality (and thus the data rate) in response to changing network conditions.
 In the presence of traffic shaping, the ABR scheme should ideally adapt the quality and converge on a bitrate sustainable by the shaper.
 In practice this is extremely difficult to achieve while maintaining a good user experience.
-Application providers are even designing algorithms to detect the presence of such traffic shapers and estimate the targeted shaping rate, however, these algorithms are inaccurate and complex.
+Application providers are even designing algorithms to detect the presence of such traffic shapers and estimate the targeted shaping rate, however, these algorithms are likely to be both inaccurate and complex.
 Instead, it would be beneficial, for both the application provider and network operator, to signal the shaper rate to the application to self-adapt their video traffic to conform to the specified characteristics.
 The application provider has the ability to measure end user QoE and therefore can self-adapt with QoE feedback.
 
