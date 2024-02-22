@@ -32,41 +32,40 @@ Notes:
 This diagram omits a lot of detail, and there are other ways that SCONEPRO could work, but it's helpful to have a strawman for discussion.
 
 ~~~~~~~~
-              +--------+ 
-  +---------> | Client |
-  |           | Opt-in |
-  |           +---+----+                
-  | (a)           |  (b)
-  |           +---v------+ 
-  |           | SCONEPRO |
-  |   +-------+ Guidance | <------+
-  |   |       +----------+        |
-  |   |                           | (c)         ----- 
-  |   | (d)      ------           |            (     )              
-  |   |         (      )      +---+-----+     (        )             
-+-+---v--+     ( Access )     | SCONEPRO |   (    IP    )       +----------+
-| Client +----( Network  )----+ Monitor  +--(   Network  )------+  Server  |
-+--------+     (        )     +----------+   (          )       +----------+
-                (------)                      (        )         
-                   Communication           (-----)           Content and 
-                  Service Provider                       Application Provider
+               +oooooooo+ 
+  +------------> Client >---------------+
+  |            o Opt-in o               |
+  |            +ooo+oooo+               |  
+  | (a)                                 |
+  |           +ooovoooooo+              |
+  |           o SCONEPRO o              |
+  |   +-------< Guidance <-------+      |
+  |   |       +oooooooooo+       |      |
+  |   |                          | (b)  |        ----- 
+  |   |          ------          |      |       (     )              
+  |   |         (      )      +--+------v-+    (       )             
++-+---v--+     ( Access )     | SCONEPRO  |   (    IP   )       +----------+
+| Client +====( Network  )====+ Monitor   +==(  Network  )======+  Server  |
++--------+     (        )     +-----------+   (         )       +----------+
+                (------)                       (       )         
+                   Communication                (-----)          Content and 
+                  Service Provider                          Application Provider
              |-----------------------------|                   |-------------|
 ~~~~~~~~
 {: #withSP title="Video Traffic with SCONEPRO"}
 
 This example assumes a model where the client performs self-adaptation based on adaptation parameters provided by the CSP, that do not attempt to take advantage of client-specific capabilities. 
 
-Spencer's opinion is that including client-specific capabilities might improve the client experience in the short term, but minimizing the CSP's knowledge of client capabilities and relying on the client to conform to generic SCONEPRO guidance will make SCONEPRO less likely to ossify, since client adaptation behavior can change without requiring corresponding changes at the CSP.
-
 Notes: 
 
 * (a) The client opts in to the Communication Service Provider (CSP) SCONEPRO Service.
-* (b) The CSP creates an initial SCONEPRO adaptation guidance control block for the client.
+* (b) The CSP creates an initial SCONEPRO adaptation guidance control block for the client, and provides initial adaptation guidance for the client. 
 * The client requests video content from a Content and Application Provider (CAP).
-* (c) The CSP's SCONEPRO Monitor provides adaptation guidance for the client.
-* (d) The client takes this adaptation guidance into account when providing feedback to the CAP Server.
+* The client takes the adaptation guidance it has received into account when providing feedback to the CAP Server.
 * The CSP's SCONEPRO Monitor observes whether the client's incoming packet stream conforms to the adapation guidance provided to the client.
    * If the incoming packet stream conforms to that guidance, the SCONEPRO Monitor takes no action.
    * If the incoming packet stream does not conform to that guidance, the SCONEPRO Monitor takes action as it would for any other packet stream.
 * The SCONEPRO Monitor doesn't need to detect video flows from a client using the SCONEPRO Service. It only needs to recognize that a client using the SCONEPRO service isn't self-adapting based on the SCONEPRO adaptation guidance.
+
+Spencer's opinion is that including client-specific capabilities might improve the client experience in the short term, but minimizing the CSP's knowledge of client capabilities and relying on the client to conform to generic SCONEPRO guidance will make SCONEPRO less likely to ossify, since client adaptation behavior can change without requiring corresponding changes at the CSP.
  
