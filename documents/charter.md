@@ -15,5 +15,16 @@ The properies of this mechanism are as follows:
 
 The proposed deliverables for SCONEPRO are as follows:
 
-1. SCONEPRO Protocol specification - this specification describes normative aspects of the SCONEPRO protocol itself. It is to be a standards-track specification, targeting protocol developers.
-1. SCONEPRO Protocol Applicability and Protocol Manageability specification - this specification provides guidance to operators making the decision to offer a SCONEPRO service in their networks, and provides assistance to operators as they tune and troubleshoot a SCONEPRO service. It is to be an informational specification. 
+1. Develop a standard track "SCONEPRO protocol" to securely communicate network information to clients. Its contents might include 
+
+* protocol requirements for the base "SCONEPRO protocols."
+* connection establishment, communication signaling and data format (container to share network information)
+* discovery mechanism (if required)
+* specify and justify privacy and security requirements
+
+1. Develop a standard track specification based on SCONEPRO protocol to communicate "maximum available bandwidth" to the client(s). Its contents might include
+
+* describe use case and motivation
+* specify exact encoding of "maximum available bandwidth" in the SCONEPRO protocol container
+
+1. Develop an Informational SCONEPRO Protocol Applicability and Protocol Manageability specification. This specification provides guidance to operators making the decision to offer a SCONEPRO service in their networks, and provides assistance to operators as they tune and troubleshoot a SCONEPRO service. It is to be an informational specification. 
