@@ -30,6 +30,8 @@ That is, no off-path element is needed to establish the communication channel be
 1. Optionality.
 The communication channel is strictly optional for the functioning of application flows.
 A client's application flow must function even if the client does not establish the channel.
+1. Resiliant to NAT rebinding. 
+The communication channel is resiliant to NAT rebinding, as long as the client is still served by the same logical CSP. 
 1. Scalability.
 The mechanism must be scalable and implementable by Internet infrastructure as it exists today, for example mobile network packet cores.
 1. Security.
