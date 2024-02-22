@@ -48,8 +48,8 @@ This diagram omits a lot of detail, and there are other ways that SCONEPRO could
 | Client +====( Network  )====+ Monitor   +===(  Network  )======+  Server  |
 +--------+     (        )     +-----------+    (         )       +----------+
                 (------)                        (       )         
-                                                 (-----)                           
-			           Communication                          Content and 
+                                                 (-----)
+                      Communication                             Content and 
                      Service Provider                       Aplication Provider
              |--------------------------------|           |---------------------|
 ~~~~~~~~
