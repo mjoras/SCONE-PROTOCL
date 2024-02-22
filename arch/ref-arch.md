@@ -33,24 +33,25 @@ This diagram omits a lot of detail, and there are other ways that SCONEPRO could
 
 ~~~~~~~~
                +oooooooo+ 
-  +------------> Client >---------------+
+  >------------> Client >---------------v
   |            o Opt-in o               |
   |            +ooo+oooo+               |  
   | (a)                                 |
   |           +ooovoooooo+              |
   |           o SCONEPRO o              |
-  |   +-------< Guidance <-------+      |
+  |   v-------< Guidance <-------<      |
   |   |       +oooooooooo+       |      |
-  |   |                          | (b)  |        ----- 
-  |   |          ------          |      |       (     )              
-  |   |         (      )      +--+------v-+    (       )             
-+-+---v--+     ( Access )     | SCONEPRO  |   (    IP   )       +----------+
-| Client +====( Network  )====+ Monitor   +==(  Network  )======+  Server  |
-+--------+     (        )     +-----------+   (         )       +----------+
-                (------)                       (       )         
-                   Communication                (-----)          Content and 
-                  Service Provider                          Application Provider
-             |-----------------------------|                   |-------------|
+  |   |                      (b) |      |         ----- 
+  |   |          ------          |      |        (     )              
+  |   |         (      )      +--^------v-+     (       )             
++-^---v--+     ( Access )     | SCONEPRO  |    (    IP   )       +----------+
+| Client +====( Network  )====+ Monitor   +===(  Network  )======+  Server  |
++--------+     (        )     +-----------+    (         )       +----------+
+                (------)                        (       )         
+                                                 (-----)                           
+			           Communication                          Content and 
+                     Service Provider                       Aplication Provider
+             |--------------------------------|           |---------------------|
 ~~~~~~~~
 {: #withSP title="Video Traffic with SCONEPRO"}
 
