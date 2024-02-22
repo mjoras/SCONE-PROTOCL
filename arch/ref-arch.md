@@ -62,9 +62,10 @@ Notes:
 * (b) The CSP creates an initial SCONEPRO adaptation guidance control block for the client, and provides initial adaptation guidance for the client. 
 * The client requests video content from a Content and Application Provider (CAP).
 * The client takes the adaptation guidance it has received into account when providing feedback to the CAP Server.
-* The CSP's SCONEPRO Monitor observes whether the client's incoming packet stream conforms to the adapation guidance provided to the client.
+* The CSP's SCONEPRO Monitor observes whether the client's incoming packet stream conforms to the adaptation guidance provided to the client.
    * If the incoming packet stream conforms to that guidance, the SCONEPRO Monitor takes no action.
    * If the incoming packet stream does not conform to that guidance, the SCONEPRO Monitor takes action as it would for any other packet stream.
+* (b) If the path characteristics between the Server and Client change, the CSP's SCONEPRO Monitor sends updated adaptation guidance to the client.
 * The SCONEPRO Monitor doesn't need to detect video flows from a client using the SCONEPRO Service. It only needs to recognize that a client using the SCONEPRO service isn't self-adapting based on the SCONEPRO adaptation guidance.
 
 Spencer's opinion is that including client-specific capabilities might improve the client experience in the short term, but minimizing the CSP's knowledge of client capabilities and relying on the client to conform to generic SCONEPRO guidance will make SCONEPRO less likely to ossify, since client adaptation behavior can change without requiring corresponding changes at the CSP.
