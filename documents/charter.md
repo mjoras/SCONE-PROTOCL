@@ -30,6 +30,8 @@ That is, no off-path element is needed to establish the communication channel be
 1. Optionality.
 The communication channel is strictly optional for the functioning of application flows.
 A client's application flow must function even if the client does not establish the channel.
+1. Properties as hints.
+Properties provided from the network to the client are hints, not directives. A client can reasonably expect that if it adjusts its behavior within the guidance provided by the network, the network will not shape traffic for this application, but this does not mean that the client is required to adjust its behavior, and this does not mean that the network will never shape traffic for this application before updating the properties provided to the client.
 1. Scalability.
 The mechanism must be scalable and implementable by Internet infrastructure as it exists today, for example mobile network packet cores.
 1. Security.
