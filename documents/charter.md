@@ -25,8 +25,8 @@ The properies of this mechanism are as follows:
 The network properties must be associated with a given application traversing the network, for example a video playback.
 1. Client initiation.
 The communication channel is initiated by a client device, just as the end to end application flows are also typically initiated by a client.
-1. Network to client. 
-The network provides the properties to the client.
+1. Network properties sent from the network. 
+The network provides the properties to the client. The client might communicate with the network, but won't be providing network properties. 
 1. On-path establishment.
 That is, no off-path element is needed to establish the communication channel between the entity communicating the properies and the client.
 1. Optionality.
