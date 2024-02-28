@@ -32,6 +32,8 @@ That is, no off-path element is needed to establish the communication channel be
 1. Optionality.
 The communication channel is strictly optional for the functioning of application flows.
 A client's application flow must function even if the client does not establish the channel.
+1. Properties are not directives.
+A client is not mandated to act on properties received from the network, and the network is not mandated to act in conformance with the properties.
 1. Resiliant to NAT rebinding. 
 The mechanism will allow the communication channel to be resiliant to NAT rebinding, as long as the client is still served by the same logical CSP. 
 1. Scalability.
