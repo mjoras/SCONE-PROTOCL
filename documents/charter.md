@@ -4,7 +4,7 @@ New formats like short form videos have seen tremendous growth in recent years.
 These growth trends are likely to increase with new populations coming online on mobile-first markets.
 
 Mobile network operators continuously invest in network resources, including deployment of new generations or new bands of spectrum.
-Since spectrum is a limited and expensive resource operators often make use of flow-based traffic handling such as shaping of video traffic, especially when the network is highly loaded.
+Since spectrum is a limited and expensive resource, operators often make use of flow-based traffic handling such as shaping of video traffic, especially when the network is highly loaded.
 Operators cannot explicitly measure the degradation that shaping causes to end user quality of experience (QoE), making this approach open loop. 
 
 Video traffic usually employs adaptive bitrate (ABR) schemes to dynamically adjust the video quality (and thus the data rate) in response to changing network conditions.
@@ -28,17 +28,17 @@ The communication channel is initiated by a client device, just as the end to en
 1. Network properties sent from the network. 
 The network provides the properties to the client. The client might communicate with the network, but won't be providing network properties. 
 1. On-path establishment.
-That is, no off-path element is needed to establish the communication channel between the entity communicating the properies and the client.
+That is, no off-path element is needed to establish the communication channel between the entity communicating the properties and the client.
 1. Optionality.
 The communication channel is strictly optional for the functioning of application flows.
 A client's application flow must function even if the client does not establish the channel.
 1. Properties are not directives.
 A client is not mandated to act on properties received from the network, and the network is not mandated to act in conformance with the properties.
-1. Resiliant to NAT rebinding. 
-The mechanism will allow the communication channel to be resiliant to NAT rebinding, as long as the client is still served by the same logical Communication Service Provider (CSP). 
+1. Resilient to NAT rebinding. 
+The mechanism will allow the communication channel to be resilient to NAT rebinding, as long as the client is still served by the same logical Communication Service Provider (CSP). 
 1. Scalability.
 The mechanism must be scalable and implementable by Internet infrastructure as it exists today, for example mobile network packet cores.
 1. Security.
 The mechanism must ensure the confidentiality, integrity, and authenticity of the communication.
-The mechanism must have independent security context from the application's security context.
+The mechanism must have an independent security context from the application's security context.
 The group must not define new security mechanisms for this purpose.
