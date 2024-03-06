@@ -35,7 +35,7 @@ A client's application flow must function even if the client does not establish 
 1. Properties are not directives.
 A client is not mandated to act on properties received from the network, and the network is not mandated to act in conformance with the properties.
 1. Resiliant to NAT rebinding. 
-The mechanism will allow the communication channel to be resiliant to NAT rebinding, as long as the client is still served by the same logical CSP. 
+The mechanism will allow the communication channel to be resiliant to NAT rebinding, as long as the client is still served by the same logical Communication Service Provider (CSP). 
 1. Scalability.
 The mechanism must be scalable and implementable by Internet infrastructure as it exists today, for example mobile network packet cores.
 1. Security.
