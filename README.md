@@ -4,6 +4,6 @@ At this time, the primary focus is on charter discussions.
 
 The current working charter is available [here](https://github.com/mjoras/SCONE-PROTOCL/blob/main/documents/charter.md).
 
-The "stable" charter linked in the BOF request for IETF 119 is available [here](https://github.com/mjoras/SCONE-PROTOCL/blob/main/documents/charter-stable.md).
+The charter version submitted to the IESG with the BOF request for IETF 119 is available [here](https://github.com/mjoras/SCONE-PROTOCL/blob/main/documents/charter-submitted-with-119-BOF-request.md).
 
 We welcome comments on active issues and PRs. 
