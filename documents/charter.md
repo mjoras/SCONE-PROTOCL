@@ -14,31 +14,27 @@ Application providers are even designing algorithms to detect the presence of su
 Instead, it would be beneficial, for both the application provider and network operator, to signal the shaper rate to the application to self-adapt their video traffic to conform to the specified characteristics.
 The application provider has the ability to measure end user QoE and therefore can self-adapt with QoE feedback.
 
-The Secure Communication of Network Properties (SCONEPRO) Working Group's primary objective is to specify an on-path protocol for securely communicating network properties to clients relevant to a given application, such as the maximum achievable bandwidth for a video. 
-- The working group will initially focus on a solution that communicates the maximum achievable bandwidth for a video delivered from a server to a client, using QUIC connections carrying the application signaling traffic.
-- Work to support TCP or other transport protocols may be considered later in the working group, however, these considerations shouldn't distract from support for video over QUIC. 
-- Further use cases may be considered later in the working group, however, it is not assumed that future use cases must or can be addressed by the same protocol. In essence, any protocol specified by the working group should be tailored to solve a specific use case.
+The Secure Communication of Network Properties (SCONEPRO) Working Group's primary objective is to specify an on-path protocol for securely communicating network properties to clients relevant to a given application, such as maximum achievable bandwidth for a video. The working group will initially focus on a solution that communicates the maximum achievable bandwidth for a video using QUIC connections carrying those applications. Further use cases may be considered later in the working group, however, it is not assumpted that all signaling use cases must or can be addressed by by the same protocol.
 
 The properies of this mechanism are as follows:
 
-1. Associativity with an application. 
-The network properties must be associated with a given application traversing the network, for example a video playback.
-1. Client initiation.
-The communication channel is initiated by a client device, just as the end to end application flows are also typically initiated by a client.
-1. Network properties sent from the network. 
-The network provides the properties to the client. The client might communicate with the network, but won't be providing network properties. 
-1. On-path establishment.
-That is, no off-path element is needed to establish the communication channel between the entity communicating the properties and the client.
-1. Optionality.
-The communication channel is strictly optional for the functioning of application flows.
-A client's application flow must function even if the client does not establish the channel.
-1. Properties are not directives.
-A client is not mandated to act on properties received from the network, and the network is not mandated to act in conformance with the properties.
-1. Resilient to NAT rebinding. 
-The mechanism will allow the communication channel to be resilient to NAT rebinding, as long as the client is still served by the same logical Communication Service Provider (CSP). 
-1. Scalability.
-The mechanism must be scalable and implementable by Internet infrastructure as it exists today, for example mobile network packet cores.
-1. Security.
-The mechanism must ensure the confidentiality, integrity, and authenticity of the communication.
-The mechanism must have an independent security context from the application's security context.
-The group must not define new security mechanisms for this purpose.
+1. On-path establishment. That is, no off-path element is needed to establish the communication channel between the entity communicating the properies and the client.
+2. Security. The mechanism must ensure the confidentiality, integrity, and authenticity of the communication. The mechanism must have independent security context from the application's security context. The group must not define new security mechanisms for this purpose.
+3. Associativity with an application. The network properties must be associated with a given application traversing the network, for example a video playback.
+4. Scalability. The mechanism must be scalable and implementable by Internet infrastructure as it exists today, for example mobile network packet cores.
+
+The proposed deliverables for SCONEPRO are as follows:
+
+* Develop a standard track "SCONEPRO protocol" to securely communicate network information to clients. Its contents might include 
+
+    * protocol requirements for the base "SCONEPRO protocols."
+    * connection establishment, communication signaling and data format (container to share network information)
+    * discovery mechanism (if required)
+    * specify and justify privacy and security requirements
+
+* Develop a standard track specification based on SCONEPRO protocol to communicate "maximum available bandwidth" to the client(s). Its contents might include
+
+    * describe use case and motivation
+    * specify exact encoding of "maximum available bandwidth" in the SCONEPRO protocol container
+
+* Develop an Informational SCONEPRO Protocol Applicability and Protocol Manageability specification. This specification provides guidance to operators making the decision to offer a SCONEPRO service in their networks, and provides assistance to operators as they tune and troubleshoot a SCONEPRO service. It is to be an informational specification. 
