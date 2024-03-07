@@ -26,7 +26,7 @@ The network properties must be associated with a given application traversing th
 1. Client initiation.
 The communication channel is initiated by a client device, just as the end to end application flows are also typically initiated by a client.
 1. On-path establishment.
-That is, no off-path element is needed to establish the communication channel between the entity communicating the properies and the client.
+That is, no off-path element is needed to establish the communication channel between the entity communicating the properties and the client.
 1. Optionality.
 The communication channel is strictly optional for the functioning of application flows.
 A client's application flow must function even if the client does not establish the channel.
