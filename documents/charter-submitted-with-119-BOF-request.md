@@ -19,14 +19,14 @@ The Secure Communication of Network Properties (SCONEPRO) Working Group's primar
 - Work to support TCP or other transport protocols may be considered later in the working group, however, these considerations shouldn't distract from support for video over QUIC. 
 - Further use cases may be considered later in the working group, however, it is not assumed that future use cases must or can be addressed by the same protocol. In essence, any protocol specified by the working group should be tailored to solve a specific use case.
 
-The properies of this mechanism are as follows:
+The properties of this mechanism are as follows:
 
 1. Associativity with an application. 
 The network properties must be associated with a given application traversing the network, for example a video playback.
 1. Client initiation.
 The communication channel is initiated by a client device, just as the end to end application flows are also typically initiated by a client.
 1. On-path establishment.
-That is, no off-path element is needed to establish the communication channel between the entity communicating the properies and the client.
+That is, no off-path element is needed to establish the communication channel between the entity communicating the properties and the client.
 1. Optionality.
 The communication channel is strictly optional for the functioning of application flows.
 A client's application flow must function even if the client does not establish the channel.
