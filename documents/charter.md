@@ -38,8 +38,9 @@ The mechanism must have independent security context from the application's secu
 The group must not define new security mechanisms for this purpose.
 
 The working group will coordinate with other groups, both inside and outside the IETF, as work progresses. Some of these groups might be
-* WEBTRANS (in the IETF, which coordinates with W3C),
-* MOQ (producing a specification for media over QUIC), 
-* AVTCORE (producing an RTP-over-QUIC specification for real-time media), 
-* MOPS (responsible for  discussion of video technology’s requirements of networking standards, as well as proposals for new uses of IP technology in video),
-* QUIC or HTTPbis, (if the working group identifies requirements for protocols used by SCONEPRO
+* WEBTRANS (in the IETF, which coordinates with W3C, responsible for browser specifications and APIs)
+* MOQ (producing a specification for streaming media over QUIC)
+* AVTCORE (producing an RTP-over-QUIC specification for real-time media)
+* MOPS (responsible for  discussion of video technology’s requirements of networking standards, as well as proposals for new uses of IP technology in video)
+* QUIC or HTTPbis, (if the working group identifies requirements for protocols used by SCONEPRO)
+* TSVWG and CCWG (if these working groups work on mechanisms that could be used in response to changes in SCONEPRO path properties)
