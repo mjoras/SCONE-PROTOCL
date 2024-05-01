@@ -43,4 +43,4 @@ The mechanism must ensure the confidentiality, integrity, and authenticity of th
 The mechanism must have an independent security context from the application's security context.
 The group must not define new security mechanisms for this purpose.
 
-The working group will consider [RFC 9419](https://www.rfc-editor.org/rfc/rfc9419.html) as a source of principles in the development of this mechanism.
+The working group will consider [RFC 9419](https://www.rfc-editor.org/rfc/rfc9419.html) as a source of principles in the development of this mechanism, and will consider relevant lessons from past IETF work in Path Aware Networking from [RFC 9049](https://www.rfc-editor.org/rfc/rfc9049.html).
