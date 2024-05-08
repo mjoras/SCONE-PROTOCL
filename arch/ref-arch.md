@@ -60,22 +60,23 @@ Notes:
 ~~~~~~~~
 {: #withSP title="Video Traffic with SCONEPRO"}
 
-* (a) The Client opts in to the Communication Service Provider's (CSP) SCONEPRO Service.
-* (b) The CSP creates an initial SCONEPRO adaptation properties control block for the Client, and provides initial adaptation properties for the Client. 
-* The Client takes the adaptation properties it has received into account when requesting ABR video from the Server.
-* The Client requests ABR video content from a Server.
-* The CSP's SCONEPRO Monitor observes whether the Client's incoming packet stream conforms to the adaptation properties provided to the Client.
-   * If the incoming packet stream conforms to those properties, the SCONEPRO Monitor takes no action.
-   * If the incoming packet stream does not conform to those properties, the SCONEPRO Monitor takes action as it would for any other packet stream.
-* (b) If the path characteristics between the Server and Client change, the CSP's SCONEPRO Monitor sends updated adaptation properties to the Client.
+* (a) The Client opts in to the Communication Service Provider's (CSP) SCONEPRO Service
+* (b) The CSP creates an initial SCONEPRO adaptation properties control block for the Client, and provides initial adaptation properties for the Client
+* The Client takes the adaptation properties it has received from the SCONEPRO Monitor into account when requesting ABR video from the Server
+* The Client requests ABR video content from a Server
+* The Server provides the requested ABR video content to the Client
+* The CSP's SCONEPRO Monitor observes whether the Client's incoming packet stream conforms to the adaptation properties provided to the Client
+   * If the incoming packet stream conforms to those properties, the SCONEPRO Monitor takes no action
+   * If the incoming packet stream does not conform to those properties, the SCONEPRO Monitor takes action as it would for any other packet stream
+* (b) If the path characteristics between the Server and Client change, the CSP's SCONEPRO Monitor might send updated adaptation properties to the Client
 
 Notes: 
 
-SCONEPRO adapation properties will often reflect a business relationship between the Client and the CSP, but this isn't necessary, and might also reflect network conditions within CSP's network.
+SCONEPRO adapation properties will often reflect a business relationship between the Client and the CSP, but this isn't necessary, and might also reflect changing network conditions within CSP's network.
 
 (Is this true?) The CSP and CAP may also have a business relationship that includes traffic parameters, but the chartered goals for SCONEPRO don't target the network path between the CSP and the CAP
 
-The SCONEPRO Monitor doesn't need to detect video flows from a Client using the SCONEPRO Service. It only needs to recognize the situation where a Client using the SCONEPRO service isn't self-adapting based on the SCONEPRO adaptation properties.
+The SCONEPRO Monitor doesn't need to detect video flows from a Client using the SCONEPRO Service. It can recognize the situation where a Client using the SCONEPRO service isn't self-adapting based on the SCONEPRO adaptation properties. What the CSP does in response is outside the scope of SCONEPRO
 
 The 
 
