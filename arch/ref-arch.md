@@ -12,17 +12,25 @@ This diagram omits a lot of detail, and there are other ways that SCONEPRO could
 +--------+     (        )     +-----------+    (         )       +----------+
                 (------)                        (       )         
                                                  (-----)
-                      Communication                             Content and 
-                     Service Provider                       Aplication Provider
-             |--------------------------------|           |---------------------|
+              Communication                                      Content and 
+            Service Provider                                 Aplication Provider
+ |-----------------------------------------------|     |--------------------------|
 ~~~~~~~~
 {: #SParch title="SCONEPRO Reference Architecture"}
 
-SCONEPRO assumes a network architecture with three components:
+SCONEPRO assumes a network architecture with these components:
 
-* A Client that consumes a video stream, and is capable of opting into a Communication Service Provider's SCONEPRO service 
-* A Server that produces a video stream
-* A SCONEPRO Monitor, located on the path between the Client and the Server, that is capable of providing network properties to a Client that opts in to the Communication Service Provider's SCONEPRO service
+* A Client that 
+    * consumes at least one Adaptive Bit Rate (ABR) video stream, 
+    * is connected to a network provided by a Communication Service Provider (CSP), and
+    * is capable of opting into a CSPs's SCONEPRO service 
+* A SCONEPRO Monitor that 
+    * is capable of providing network properties to a Client, 
+    * is also connected to a network provided by the same CSP and 
+    * is located on the path between the Client and the Server
+* A Server that 
+    * produces at least one ABR video stream, and
+    * is connected to a network provided by a Content and Application Provider (CAP)
 
 Notes: 
 
@@ -46,24 +54,31 @@ Notes:
 +--------+     (        )     +-----------+    (         )       +----------+
                 (------)                        (       )         
                                                  (-----)
-                      Communication                             Content and 
-                     Service Provider                       Aplication Provider
-             |--------------------------------|           |---------------------|
+              Communication                                      Content and 
+            Service Provider                                 Aplication Provider
+ |-----------------------------------------------|     |--------------------------|
 ~~~~~~~~
 {: #withSP title="Video Traffic with SCONEPRO"}
 
-This example assumes a model where the client performs self-adaptation based on adaptation parameters provided by the CSP, that do not attempt to take advantage of client-specific capabilities. 
+* (a) The Client opts in to the Communication Service Provider's (CSP) SCONEPRO Service.
+* (b) The CSP creates an initial SCONEPRO adaptation properties control block for the Client, and provides initial adaptation properties for the Client. 
+* The Client takes the adaptation properties it has received into account when requesting ABR video from the Server.
+* The Client requests ABR video content from a Server.
+* The CSP's SCONEPRO Monitor observes whether the Client's incoming packet stream conforms to the adaptation properties provided to the Client.
+   * If the incoming packet stream conforms to those properties, the SCONEPRO Monitor takes no action.
+   * If the incoming packet stream does not conform to those properties, the SCONEPRO Monitor takes action as it would for any other packet stream.
+* (b) If the path characteristics between the Server and Client change, the CSP's SCONEPRO Monitor sends updated adaptation properties to the Client.
 
 Notes: 
 
-* (a) The client opts in to the Communication Service Provider's (CSP) SCONEPRO Service.
-* (b) The CSP creates an initial SCONEPRO adaptation properties control block for the client, and provides initial adaptation properties for the client. 
-* The client requests video content from a Content and Application Provider (CAP).
-* The client takes the adaptation properties it has received into account when providing feedback to the CAP Server.
-* The CSP's SCONEPRO Monitor observes whether the client's incoming packet stream conforms to the adaptation properties provided to the client.
-   * If the incoming packet stream conforms to those properties, the SCONEPRO Monitor takes no action.
-   * If the incoming packet stream does not conform to those properties, the SCONEPRO Monitor takes action as it would for any other packet stream.
-* (b) If the path characteristics between the Server and Client change, the CSP's SCONEPRO Monitor sends updated adaptation properties to the client.
-* The SCONEPRO Monitor doesn't need to detect video flows from a client using the SCONEPRO Service. It only needs to recognize that a client using the SCONEPRO service isn't self-adapting based on the SCONEPRO adaptation properties.
+SCONEPRO adapation properties will often reflect a business relationship between the Client and the CSP, but this isn't necessary, and might also reflect network conditions within CSP's network.
 
-Spencer's opinion is that including client-specific capabilities might improve the client experience in the short term, but minimizing the CSP's knowledge of client capabilities and relying on the client to conform to generic SCONEPRO properties will make SCONEPRO less likely to ossify, since client adaptation behavior can change without requiring corresponding changes at the CSP.
+(Is this true?) The CSP and CAP may also have a business relationship that includes traffic parameters, but the chartered goals for SCONEPRO don't target the network path between the CSP and the CAP
+
+The SCONEPRO Monitor doesn't need to detect video flows from a Client using the SCONEPRO Service. It only needs to recognize the situation where a Client using the SCONEPRO service isn't self-adapting based on the SCONEPRO adaptation properties.
+
+The 
+
+This example assumes a model where the Client performs self-adaptation based on adaptation parameters provided by the CSP, that do not attempt to take advantage of Client-specific capabilities. 
+
+Spencer's opinion is that including Client-specific capabilities might improve the Client experience in the short term, but minimizing the CSP's knowledge of Client capabilities and relying on the Client to conform to generic SCONEPRO properties will make SCONEPRO less likely to ossify, since Client adaptation behavior can change without requiring corresponding changes at the CSP.
