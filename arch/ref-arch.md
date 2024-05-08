@@ -78,8 +78,6 @@ SCONEPRO adapation properties will often reflect a business relationship between
 
 The SCONEPRO Monitor doesn't need to detect video flows from a Client using the SCONEPRO Service. It can recognize the situation where a Client using the SCONEPRO service isn't self-adapting based on the SCONEPRO adaptation properties. What the CSP does in response is outside the scope of SCONEPRO
 
-The 
-
 This example assumes a model where the Client performs self-adaptation based on adaptation parameters provided by the CSP, that do not attempt to take advantage of Client-specific capabilities. 
 
 Spencer's opinion is that including Client-specific capabilities might improve the Client experience in the short term, but minimizing the CSP's knowledge of Client capabilities and relying on the Client to conform to generic SCONEPRO properties will make SCONEPRO less likely to ossify, since Client adaptation behavior can change without requiring corresponding changes at the CSP.
