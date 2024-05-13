@@ -34,14 +34,12 @@ The communication channel is strictly optional for the functioning of applicatio
 A client's application flow must function even if the client does not establish the channel.
 1. Properties are not directives.
 A client is not mandated to act on properties received from the network, and the network is not mandated to act in conformance with the properties.
-1. Resilient to NAT rebinding. 
-The mechanism will allow the communication channel to be resilient to NAT rebinding, as long as the client is still served by the same logical Communication Service Provider (CSP). 
+1. Resilient to NAT rebinding and multi-path QUIC. 
+The mechanism will allow the communication channel to be resilient to NAT rebinding, as long as the client is still served by the same logical Communication Service Provider (CSP). Additionally, the mechanism must work with flows that utilize multi-path QUIC and be able to distinguish network properties from the two paths. 
 1. Scalability.
 The mechanism must be scalable and implementable by Internet infrastructure as it exists today, for example mobile network packet cores.
 1. Security.
-The mechanism must ensure the confidentiality, integrity, and authenticity of the communication.
-The mechanism must have an independent security context from the application's security context.
-The group must not define new security mechanisms for this purpose.
+The mechanism must have the extensibility to provide confidentiality, integrity, and authenticity of the communication. The working group must consider the value and implications of different confidentiality modes of the communication.
 
 The working group will consider [RFC 9419](https://www.rfc-editor.org/rfc/rfc9419.html) as a source of principles in the development of this mechanism, and will consider relevant lessons from past IETF work in Path Aware Networking from [RFC 9049](https://www.rfc-editor.org/rfc/rfc9049.html).
 
