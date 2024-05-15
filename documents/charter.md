@@ -5,7 +5,7 @@ These growth trends are likely to increase with new populations coming online on
 
 Mobile network operators continuously invest in network resources, including deployment of new generations or new bands of spectrum.
 Since spectrum is a limited and expensive resource, operators often make use of flow-based traffic handling such as shaping of video traffic, especially when the network is highly loaded.
-Operators cannot explicitly measure the degradation that shaping causes to end user quality of experience (QoE), making this approach open loop. 
+Operators cannot explicitly measure the degradation that shaping causes to end user quality of experience (QoE), making this approach open loop.
 
 Video traffic usually employs adaptive bitrate (ABR) schemes to dynamically adjust the video quality (and thus the data rate) in response to changing network conditions.
 In the presence of traffic shaping, the ABR scheme should ideally adapt the quality and converge on a bitrate sustainable by the shaper.
@@ -25,11 +25,12 @@ The properies of this mechanism are as follows:
 
 The proposed deliverables for SCONEPRO are as follows:
 
-* Develop a standard track "SCONEPRO protocol" to securely communicate network information to clients. Its contents might include 
+* Develop a standard track "SCONEPRO protocol" to securely communicate network information to clients. Its contents might include
 
     * protocol requirements for the base "SCONEPRO protocols."
-    * connection establishment, communication signaling and data format (container to share network information)
+	* describe minimal reference architecture for SCONEPRO deployment
     * discovery mechanism (if required)
+    * connection establishment, communication signaling and data format (container to share network information)
     * specify and justify privacy and security requirements
 
 * Develop a standard track specification based on SCONEPRO protocol to communicate "maximum available bandwidth" to the client(s). Its contents might include
@@ -37,4 +38,6 @@ The proposed deliverables for SCONEPRO are as follows:
     * describe use case and motivation
     * specify exact encoding of "maximum available bandwidth" in the SCONEPRO protocol container
 
-* Develop an Informational SCONEPRO Protocol Applicability and Protocol Manageability specification. This specification provides guidance to operators making the decision to offer a SCONEPRO service in their networks, and provides assistance to operators as they tune and troubleshoot a SCONEPRO service. It is to be an informational specification. 
+* Develop an Informational SCONEPRO Protocol Applicability and Protocol Manageability specification. Its contents might include
+	* guidance to operators making the decision to offer a SCONEPRO service in their networks
+	* assistance to operators in tuning and troubleshooting a SCONEPRO service.
