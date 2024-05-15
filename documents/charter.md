@@ -34,8 +34,8 @@ The communication channel is strictly optional for the functioning of applicatio
 A client's application flow must function even if the client does not establish the channel.
 1. Properties are not directives.
 A client is not mandated to act on properties received from the network, and the network is not mandated to act in conformance with the properties.
-1. Resilient to NAT rebinding and multi-path QUIC. 
-The mechanism will allow the communication channel to be resilient to NAT rebinding, as long as the client is still served by the same logical Communication Service Provider (CSP). Additionally, the mechanism must work with flows that utilize multi-path QUIC and be able to distinguish network properties from the two paths. 
+1. Resilient to NAT rebinding, QUIC connection migration, and Multipath QUIC operation. 
+The mechanism will allow the communication channel to be resilient to NAT rebinding, as long as the client is still served by the same logical Communication Service Provider (CSP). Additionally, the mechanism must work with flows that utilize QUIC connection migration or Multipath QUIC, and be able to distinguish network properties from two or more paths. 
 1. Scalability.
 The mechanism must be scalable and implementable by Internet infrastructure as it exists today, for example mobile network packet cores.
 1. Security.
