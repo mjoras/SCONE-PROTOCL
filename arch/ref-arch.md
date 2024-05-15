@@ -4,59 +4,61 @@ This diagram omits a lot of detail, and there are other ways that SCONEPRO could
 
 ~~~~~~~~
 
-                                                  ----- 
-                 ------                          (     )              
-                (      )      +--^------v-+     (       )             
+                                                  -----
+                 ------                          (     )
+                (      )      +--^------v-+     (       )
 +-^---v--+     ( Access )     | SCONEPRO  |    (    IP   )       +----------+
 | Client +====( Network  )====+  Monitor  +===(  Network  )======+  Server  |
 +--------+     (        )     +-----------+    (         )       +----------+
-                (------)                        (       )         
+                (------)                        (       )
                                                  (-----)
-              Communication                                      Content and 
+              Communication                                      Content and
             Service Provider                                 Aplication Provider
- |-----------------------------------------------|     |--------------------------|
+     |-------------------------------------------|     |--------------------------|
 ~~~~~~~~
 {: #SParch title="SCONEPRO Reference Architecture"}
 
 SCONEPRO assumes a network architecture with these components:
 
-* A Client that 
-    * consumes at least one Adaptive Bit Rate (ABR) video stream, 
+* A Client that
+    * consumes at least one Adaptive Bit Rate (ABR) video stream,
     * is connected to a network provided by a Communication Service Provider (CSP), and
-    * is capable of opting into a CSPs's SCONEPRO Service 
-* A SCONEPRO Monitor that 
-    * is capable of providing network properties to a Client, 
-    * is also connected to a network provided by the same CSP and 
+    * is capable of opting into a CSPs's SCONEPRO Service
+* A SCONEPRO Monitor that
+    * is capable of providing network properties to a Client,
+    * is also connected to a network provided by the same CSP and
     * is located on the path between the Client and the Server
-* A Server that 
+* A Server that
     * produces at least one ABR video stream, and
     * is connected to a network provided by a Content and Application Provider (CAP)
 
-Notes: 
+Notes:
+
+* The Client is connected to a CSP's network, but may or may not be controlled by the CSP, and may be providing Internet access to other devices attached to the Client.
 
 ## One Way SCONEPRO Could Work
 
 ~~~~~~~~
-               +oooooooo+ 
+               +oooooooo+
   >------------> Client >---------------v
   |            o Opt-in o               |
-  |            +ooo+oooo+               |  
+  |            +ooo+oooo+               |
   | (a)                                 |
   |          +ooovooooooo+              |
   |          o  SCONEPRO o              |
   |   v------< Properties<-------<      |
   |   |      +ooooooooooo+       |      |
-  |   |                      (b) |      |         ----- 
-  |   |          ------          |      |        (     )              
-  |   |         (      )      +--^------v-+     (       )             
+  |   |                      (b) |      |         -----
+  |   |          ------          |      |        (     )
+  |   |         (      )      +--^------v-+     (       )
 +-^---v--+     ( Access )     | SCONEPRO  |    (    IP   )       +----------+
 | Client +====( Network  )====+  Monitor  +===(  Network  )======+  Server  |
 +--------+     (        )     +-----------+    (         )       +----------+
-                (------)                        (       )         
+                (------)                        (       )
                                                  (-----)
-              Communication                                      Content and 
+              Communication                                      Content and
             Service Provider                                 Aplication Provider
- |-----------------------------------------------|     |--------------------------|
+     |-------------------------------------------|     |--------------------------|
 ~~~~~~~~
 {: #withSP title="Video Traffic with SCONEPRO"}
 
@@ -70,7 +72,7 @@ Notes:
    * If the incoming packet stream does not conform to those properties, the SCONEPRO Monitor takes action as it would for any other packet stream
 * (b) If the path characteristics between the Server and Client change, the CSP's SCONEPRO Monitor might send updated adaptation properties to the Client
 
-Notes: 
+Notes:
 
 This example assumes a model where the Client performs self-adaptation based on adaptation parameters provided by the CSP that do not attempt to take advantage of Client-specific capabilities. Including Client-specific capabilities might improve the Client experience in the short term, but minimizing the CSP's knowledge of Client capabilities and relying on the Client to conform to generic SCONEPRO properties will make SCONEPRO less likely to ossify, since Client adaptation behavior can change without requiring corresponding changes at the CSP.
 
