@@ -27,7 +27,7 @@ The proposed deliverables for SCONEPRO are as follows:
 
 * Develop a standard track "SCONEPRO protocol" to securely communicate network information to clients. Its contents might include
 
-    * protocol requirements for the base "SCONEPRO protocols."
+    * protocol requirements for the base "SCONEPRO protocols"
 	* describe minimal reference architecture for SCONEPRO deployment
     * discovery mechanism (if required)
     * connection establishment, communication signaling and data format (container to share network information)
@@ -39,5 +39,6 @@ The proposed deliverables for SCONEPRO are as follows:
     * specify exact encoding of "maximum available bandwidth" in the SCONEPRO protocol container
 
 * Develop an Informational SCONEPRO Protocol Applicability and Protocol Manageability specification. Its contents might include
+
 	* guidance to operators making the decision to offer a SCONEPRO service in their networks
-	* assistance to operators in tuning and troubleshooting a SCONEPRO service.
+	* assistance to operators in tuning and troubleshooting a SCONEPRO service
