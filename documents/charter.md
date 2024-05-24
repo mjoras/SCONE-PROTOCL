@@ -25,7 +25,7 @@ The properies of this mechanism are as follows:
 
 1. Associativity with an application.
 The network properties must be associated with a given application traversing the network, for example a video playback.
-1. One communication channel for client initiation and network properties
+1. Single communication channel for both client initiation and network properties.
 The communication channel is initiated by a client device, just as the end to end application flows are also typically initiated by a client. The same communication channel is used to provide network properties to the client.
 1. Network properties sent from the network.
 The network provides the properties to the client. The client might communicate with the network, but won't be providing network properties.
