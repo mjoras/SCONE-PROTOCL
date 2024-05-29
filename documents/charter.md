@@ -3,11 +3,11 @@ Across developed and emerging markets video traffic forms 50-80% of traffic volu
 New formats like short form videos have seen tremendous growth in recent years.
 These growth trends are likely to increase with new populations coming online on mobile-first markets.
 
-Local mobile radio conditions may constrain the maximum throughput for a given client, or be so volatile as to rapidly change the maximum throughput throughout the course of a session. 
-In addition, despite capacity augmentation work such as deployment of new generations or new bands of spectrum, capacity augmentation efforts are not keeping pace with growth in demand. 
-These network operators have found it faster and less expensive to invest in shaping (also called throttling) of video traffic on a per-flow basis, which negatively affects video stream quality. 
+Local mobile radio conditions may constrain the maximum throughput for a given client, or be so volatile as to rapidly change the maximum throughput throughout the course of a session.
+In addition, despite capacity augmentation work such as deployment of new generations or new bands of spectrum, capacity augmentation efforts are not keeping pace with growth in demand.
+These network operators have found it faster and less expensive to invest in shaping (also called throttling) of video traffic on a per-flow basis, which negatively affects video stream quality.
 This is done for both network management and business motivations.
-Network operators cannot explicitly measure the degradation to end user quality of experience (QoE) caused by traffic shaping, making this approach open loop. 
+Network operators cannot explicitly measure the degradation to end user quality of experience (QoE) caused by traffic shaping, making this approach open loop.
 
 Video traffic usually employs adaptive bitrate (ABR) schemes to dynamically adjust the video quality (and thus the data rate) in response to changing network conditions.
 Ideally, when a network operator performs traffic shaping, the ABR scheme should adapt the video quality in use to reflect the data rate allowed by shaping, and converge on a bitrate allowed by the shaper.
@@ -23,12 +23,12 @@ The Secure Communication of Network Properties (SCONEPRO) Working Group's primar
 
 The properies of this mechanism are as follows:
 
-1. Associativity with an application. 
+1. Associativity with an application.
 The network properties must be associated with a given application traversing the network, for example a video playback.
-1. Client initiation.
-The communication channel is initiated by a client device, just as the end to end application flows are also typically initiated by a client.
-1. Network properties sent from the network. 
-The network provides the properties to the client. The client might communicate with the network, but won't be providing network properties. 
+1. Single communication channel for both client initiation and network properties.
+The communication channel is initiated by a client device, just as the end to end application flows are also typically initiated by a client. The same communication channel is used to provide network properties to the client.
+1. Network properties sent from the network.
+The network provides the properties to the client. The client might communicate with the network, but won't be providing network properties.
 1. On-path establishment.
 That is, no off-path element is needed to establish the communication channel between the entity communicating the properties and the client.
 1. Optionality.
@@ -36,8 +36,8 @@ The communication channel is strictly optional for the functioning of applicatio
 A client's application flow must function even if the client does not establish the channel.
 1. Properties are not directives.
 A client is not mandated to act on properties received from the network, and the network is not mandated to act in conformance with the properties.
-1. Resilient to NAT rebinding, QUIC connection migration, and Multipath QUIC operation. 
-The mechanism will allow the communication channel to be resilient to NAT rebinding, as long as the client is still served by the same logical Communication Service Provider (CSP). Additionally, the mechanism must work with flows that utilize QUIC connection migration or Multipath QUIC, and be able to distinguish network properties from two or more paths. 
+1. Resilient to NAT rebinding, QUIC connection migration, and Multipath QUIC operation.
+The mechanism will allow the communication channel to be resilient to NAT rebinding, as long as the client is still served by the same logical Communication Service Provider (CSP). Additionally, the mechanism must work with flows that utilize QUIC connection migration or Multipath QUIC, and be able to distinguish network properties from two or more paths.
 1. Scalability.
 The mechanism must be scalable and implementable by Internet infrastructure as it exists today, for example mobile network packet cores.
 1. Security.
