@@ -52,3 +52,25 @@ The working group will coordinate with other groups, both inside and outside the
 * MOPS (responsible for  discussion of video technology’s requirements of networking standards, as well as proposals for new uses of IP technology in video)
 * QUIC or HTTPbis, (if the working group identifies requirements for protocols used by SCONEPRO)
 * TSVWG and CCWG (if these working groups work on mechanisms that could be used in response to changes in SCONEPRO path properties)
+
+The proposed deliverables for SCONEPRO are as follows:
+
+* Develop a standard track "SCONEPRO protocol" to securely communicate network information to clients. Its contents might include
+
+    * protocol requirements for the base "SCONEPRO protocol"
+	* describe minimal reference architecture for SCONEPRO deployment
+    * discovery mechanism (if required)
+    * connection establishment, communication signaling and data format (container to share network information)
+    * specify and justify privacy and security requirements
+
+* Develop a standard track specification based on SCONEPRO protocol to communicate network properties applicable to streaming video from the SCONEPRO monitor to the client(s). Its contents might include
+
+    * describe use case and motivation
+	* specify the applicable network properties to be communicated to the client
+    * specify exact encoding of each applicable network property in the SCONEPRO protocol container
+	* specify considerations for reusing these network properties in other encapsulations
+
+* Develop an Informational SCONEPRO Protocol Applicability and Protocol Manageability specification. Its contents might include
+
+	* guidance to operators making the decision to offer a SCONEPRO service in their networks
+	* assistance to operators in tuning and troubleshooting a SCONEPRO service
