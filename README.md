@@ -9,3 +9,5 @@ The working version of the proposed charter used during the IETF 119 BOF is avai
 The proposed charter version submitted to the IESG with the BOF request for IETF 119 is available [here](https://github.com/mjoras/SCONE-PROTOCL/blob/main/documents/charter-submitted-with-119-BOF-request.md).
 
 We welcome comments on open issues and PRs. We do ask that contributors create issues for specific questions, before creating proposed text for those questions in PRs. 
+
+The BOF request for IETF 120 lives in GitHub [here](https://github.com/mjoras/SCONE-PROTOCL/blob/main/meetings/bof-120/bof-request.md) and is on the datatracker [here](https://datatracker.ietf.org/doc/bofreq-joras-sconepro/).
