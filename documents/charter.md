@@ -21,7 +21,7 @@ The Secure Communication of Network Properties (SCONEPRO) Working Group's primar
 - Work to support TCP or other transport protocols may be considered later in the working group, however, these considerations shouldn't distract from support for video over QUIC. 
 - Further use cases may be considered later in the working group, however, it is not assumed that future use cases must or can be addressed by the same protocol. In essence, any protocol specified by the working group should be tailored to solve a specific use case.
 
-The properies of this mechanism are as follows:
+The properties of this mechanism are as follows:
 
 1. Associativity with an application.
 The network properties must be associated with a given application traversing the network, for example a video playback.
