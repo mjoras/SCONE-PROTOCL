@@ -16,12 +16,6 @@ Application providers are even designing algorithms to detect the presence of su
 Instead, it would be beneficial, for both the application provider and network operator, to signal network attributes to the application to self-adapt its video traffic to conform to the specified characteristics.
 The application provider has the ability to measure end user QoE and therefore can self-adapt with QoE feedback.
 
-L4S is a recently standardized mechanism where nodes in the network assist endpoints in discovering optimal sending rates through continous ECN feedback that gets interpreted by purpose built congestion control algorithms.
-However, L4S in itself is not sufficient as a mechanism to communicate network properties relating to video self-adaptation.
-L4S and ECN operates on RTT timescales, reflecting the current state of a network buffer, whereas the network properties relating to video traffic reflect policies that tend to be stable over orders of magnitude longer time scales. 
-It is possible to construct an L4S capable traffic policer that marks packets that do not conform to some policy instead of dropping or queueing them, however such a policer is not explicitly distinguishable from a network node that experiences congestion. 
-Furthermore, a signal consumed by the application layer allows for efficient bursting of video segments, with burst sizes controlled by the sending entity rather than on-path network policers.
-
 L4S is a recently standardized mechanism where nodes in the network assist endpoints in discovering optimal sending rates through continuous ECN feedback, interpreted by purpose-built congestion control algorithms. 
 However, L4S alone is not sufficient to communicate network properties related to video self-adaptation. 
 L4S and ECN operate on RTT timescales, reflecting the current state of a network buffer, whereas the network properties related to video traffic reflect policies that tend to be stable over orders of magnitude longer timescales. 
