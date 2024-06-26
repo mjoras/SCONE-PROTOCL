@@ -60,7 +60,7 @@ The proposed deliverables for SCONEPRO are as follows:
 	* protocol requirements for the base "SCONEPRO protocol"
 	* describe minimal reference architecture for SCONEPRO deployment
 	* connection establishment, communication signaling and data format (container to share network information)
-	* describe use case and motivation for SCONEPRO aupport of streaming video applications
+	* describe use case and motivation for SCONEPRO support of streaming video applications
 	* specify the applicable network properties to be communicated to the client
 	* specify exact encoding of each applicable network property in the SCONEPRO protocol container
 	* specify considerations for reusing these network properties in other encapsulations
