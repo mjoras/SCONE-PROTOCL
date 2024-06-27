@@ -17,11 +17,9 @@ Instead, it would be beneficial, for both the application provider and network o
 The application provider has the ability to measure end user QoE and therefore can self-adapt with QoE feedback.
 
 L4S is an IETF-specified mechanism where nodes in the network assist endpoints in discovering optimal sending rates through continuous ECN feedback, interpreted by purpose-built congestion control algorithms. 
-However, L4S alone is not sufficient to communicate network properties related to video self-adaptation. 
-L4S and ECN operate on RTT timescales, reflecting the current state of a network buffer, whereas the network properties related to video traffic reflect policies that tend to be stable over orders of magnitude longer timescales. 
-It is possible to construct an L4S-capable traffic policer that marks packets that do not conform to some policy instead of dropping or queueing them. 
-Such a policer is not explicitly distinguishable from a network node that experiences congestion. 
-Furthermore, a more long-term signal that is consumed by the application layer allows for efficient bursting of video segments, with burst sizes controlled by the sending entity rather than on-path network policers. 
+L4S and ECN operate on RTT timescales, whereas network policies tend to be stable over much longer timescales.
+Using L4S to signal this longer-term state is possible, but it conflates separate signals about queuing state and policy.
+A signal with longer-term semantics allow senders to temporarily exceed limits, which can be significantly more efficient.
 
 The Secure Communication of Network Properties (SCONEPRO) Working Group's primary objective is to specify an on-path protocol for securely communicating network properties to clients relevant to a given application, such as the maximum achievable throughput for a video. 
 - The working group will initially focus on a solution that communicates the maximum achievable throughput for a video delivered from a server to a client, using QUIC connections carrying the application signaling traffic.
