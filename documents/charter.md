@@ -55,19 +55,5 @@ The working group will coordinate with other groups, both inside and outside the
 
 The proposed deliverables for SCONEPRO are as follows:
 
-* Develop a standard track "SCONEPRO protocol" to securely communicate network information to clients. Its contents might include
-
-	* protocol requirements for the base "SCONEPRO protocol"
-	* describe minimal reference architecture for SCONEPRO deployment
-	* connection establishment, communication signaling and data format (container to share network information)
-	* describe use case and motivation for SCONEPRO support of streaming video applications
-	* specify the applicable network properties to be communicated to the client
-	* specify exact encoding of each applicable network property in the SCONEPRO protocol container
-	* specify considerations for reusing these network properties in other encapsulations
-	* specify and justify privacy and security requirements
-
-* Develop an Informational SCONEPRO Protocol Applicability and Manageability specification. Its contents might include
-
-	* guidance to operators making the decision to offer a SCONEPRO service in their networks
-	* deployment considerations (discovery, etc.)
-	* assistance to operators in tuning and troubleshooting a SCONEPRO service
+* Develop a standard track "SCONEPRO protocol" to securely communicate network information to clients.
+* Develop an Informational SCONEPRO Protocol Applicability and Manageability specification.
