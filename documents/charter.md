@@ -63,7 +63,7 @@ The proposed deliverables for SCONEPRO are as follows:
     * connection establishment, communication signaling and data format (container to share network information)
     * specify and justify privacy and security requirements
 
-* Develop a standard track specification based on SCONEPRO protocol to specify a format for network properties applicable to streaming video to be communicated from the SCONEPRO monitor to the client(s). Its contents might include
+* Develop a standard track specification describing a SCONEPRO protocol to communicate network properties applicable to streaming video from the SCONEPRO monitor to the client(s), and specifying a format for those applicable network properties.  Its contents might include
 
     * describe use case and motivation
 	* specify the applicable network properties to be communicated to the client
