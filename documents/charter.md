@@ -19,7 +19,7 @@ The application provider has the ability to measure end user QoE and therefore c
 L4S is an IETF-specified mechanism where nodes in the network assist endpoints in discovering optimal sending rates through continuous ECN feedback, interpreted by purpose-built congestion control algorithms. 
 L4S and ECN operate on RTT timescales, whereas network policies tend to be stable over much longer timescales.
 Using L4S to signal this longer-term state is possible, but it conflates separate signals about queuing state and policy.
-A signal with longer-term semantics allow senders to temporarily exceed limits, which can be significantly more efficient.
+An unambiguous policy signal allows an application to comply with that policy on timescales that work best for the application's QoE, while continuing to respond to congestion signals on RTT timescales.
 
 The Secure Communication of Network Properties (SCONEPRO) Working Group's primary objective is to specify an on-path protocol for securely communicating network properties to clients relevant to a given application, such as the maximum achievable throughput for a video. 
 - The working group will initially focus on a solution that communicates the maximum achievable throughput for a video delivered from a server to a client, using QUIC connections carrying the application signaling traffic.
