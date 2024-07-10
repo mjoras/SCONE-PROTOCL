@@ -16,10 +16,8 @@ Application providers are even designing algorithms to detect the presence of su
 Instead, it would be beneficial, for both the application provider and network operator, to signal network attributes to the application to self-adapt its video traffic to conform to the specified characteristics.
 The application provider has the ability to measure end user QoE and therefore can self-adapt with QoE feedback.
 
-The Secure Communication of Network Properties (SCONEPRO) Working Group's primary objective is to specify an on-path protocol for securely communicating network properties to clients relevant to a given application, such as the maximum achievable throughput for a video. 
-- The working group will initially focus on a solution that communicates the maximum achievable throughput for a video delivered from a server to a client, using QUIC connections carrying the application signaling traffic.
-- Work to support TCP or other transport protocols may be considered later in the working group, however, these considerations shouldn't distract from support for video over QUIC. 
-- Further use cases may be considered later in the working group, however, it is not assumed that future use cases must or can be addressed by the same protocol. In essence, any protocol specified by the working group should be tailored to solve a specific use case.
+The Secure Communication of Network Properties (SCONEPRO) Working Group's primary objective is to specify an on-path protocol for securely communicating network properties to clients relevant to video playback, such as the maximum achievable throughput for a video. 
+- The working group will focus on a solution that communicates the maximum achievable throughput for a video delivered from a server to a client, using QUIC connections carrying the application signaling traffic.
 
 The properties of this mechanism are as follows:
 
