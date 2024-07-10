@@ -3,7 +3,7 @@ Across developed and emerging markets video traffic forms 50-80% of traffic volu
 New formats like short form videos have seen tremendous growth in recent years.
 These growth trends are likely to increase with new populations coming online on mobile-first markets.
 
-Local mobile radio conditions may constrain the maximum throughput for a given client, or be so volatile as to rapidly change the maximum throughput throughout the course of a session.
+Local access network conditions may constrain the maximum throughput for a given client, or be so volatile as to rapidly change the maximum throughput throughout the course of a session.
 In addition, despite capacity augmentation work such as deployment of new generations or new bands of spectrum, capacity augmentation efforts are not keeping pace with growth in demand.
 These network operators have found it faster and less expensive to invest in shaping (also called throttling) of video traffic on a per-flow basis, which negatively affects video stream quality.
 This is done for both network management and business motivations.
