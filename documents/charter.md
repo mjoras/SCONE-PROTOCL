@@ -41,6 +41,13 @@ The mechanism must be scalable and implementable by Internet infrastructure as i
 1. Security.
 The mechanism will have the ability to invoke security mechanisms that provide confidentiality, integrity, and authenticity of the communication. The working group will consider the value and implications of different confidentiality modes of the communication.
 
+The following topics are out of scope for SCONEPRO:
+
+1. Support for streaming video flows carried in other transports and substrates. SCONEPRO is focused on streaming video carried either directly in QUIC, or indirectly in QUIC, as through HTTP/3.
+1. Support for other media types that would require awareness of additional network attributes beyond the attributes applicable to ABR video.
+1. General extensibility to support other network attributes. If additional network attributes are identified, the working group will request recharter to add them to SCONEPRO.
+1. Any aspects of fine-grained congestion control signaling. This is in scope for existing IETF working groups now.
+
 The working group will consider [RFC 9419](https://www.rfc-editor.org/rfc/rfc9419.html) as a source of principles in the development of this mechanism, and will consider relevant lessons from past IETF work in Path Aware Networking from [RFC 9049](https://www.rfc-editor.org/rfc/rfc9049.html).
 
 The working group will coordinate with other groups, both inside and outside the IETF, as work progresses. Some of these groups might be
