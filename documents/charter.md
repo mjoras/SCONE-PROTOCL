@@ -24,7 +24,7 @@ The Secure Communication of Network Properties (SCONEPRO) Working Group's primar
 The properties of this mechanism are as follows:
 
 1. Flow associativity.
-The network communications the properties as they relate to specific (QUIC) flows. This ensures that applications can authorize and apply actions on a per-flow basis.
+The network communicates applicable properties as they relate to specific QUIC connections. This ensures that applications can authorize and apply actions on a per-QUIC connection basis.
 1. Single communication channel for both client initiation and network properties.
 The communication channel is initiated by a client device, just as the end to end application flows are also typically initiated by a client. The same communication channel is used to provide network properties to the client.
 1. Network properties sent from the network.
