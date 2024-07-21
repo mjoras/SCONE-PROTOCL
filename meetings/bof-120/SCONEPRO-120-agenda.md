@@ -1,10 +1,16 @@
 # Name: Securely COmmunicating NEtwork PROperties (SCONEPRO)
-## Agenda 
-| Agenda topic    | Speaker      | Time | Comments |
+IETF 120, Vancouver
+Regency C/D at 09:30-11:30 (UTC-7)
+Chairs: Cullen Jennings, Martin Thomson
+
+## Agenda
+
+| Agenda topic    | Speaker      | Time |
 | :- | :- | -: | :- |
-| Introduction    | Chairs       | 10 m  |          |
-| Review of Problem Statement    | Chairs       | 15 m  |          |
-| Known Concerns and Proposed Dispositions  | Chairs       | 20 m  |          |
-| Review of Proposed Charter Text    | Chairs       | 15 m  |          |
-| Discussion on Charter Scope and Text | Everyone | 45 m | |
-| RFC 5434-style Questions and Conclusions | Chairs | 15 m | |
+| Introduction | Chairs | 10m |
+| Status at IETF 119 and since | Chairs | 5m |
+| Recap of Problem Statement | Marcus Ihlar | 10m |
+| Discussion of open issues | Matt Joras | 20m |
+| Proposed Charter | Chairs | 15m |
+| Charter text and scope discussion | Everyone | 45m |
+| BoF Questions | Chairs | 15m |
