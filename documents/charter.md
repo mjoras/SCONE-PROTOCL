@@ -51,9 +51,9 @@ This working group will not produce a solution that:
 The WG is expected to:
 
 1. Develop a standards track protocol to communicate the maximum allowable
-bitrate—termed "application limit"—to the endpoint.  Develop an
-Informational Applicability and Manageability specification.
+bitrate—termed "application limit"—to the endpoint.
+2. Develop an Informational Applicability and Manageability specification.
 
-2. The WG will work collaboratively with the WEBTRANS, MOQ, AVTCORE, MOPS,
+The WG will work collaboratively with the WEBTRANS, MOQ, AVTCORE, MOPS,
 QUIC, TSVWG,and CCWG WGs as appropriate.
 
