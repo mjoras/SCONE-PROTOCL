@@ -1,63 +1,59 @@
-Video traffic is 70% of the overall traffic volume on the Internet and is expected to grow to 80% by 2028.
-Across developed and emerging markets video traffic forms 50-80% of traffic volume on mobile networks.
-New formats like short form videos have seen tremendous growth in recent years.
-These growth trends are likely to increase with new populations coming online on mobile-first markets.
+## Background
 
-Local access network conditions may constrain the maximum throughput for a given client, or be so volatile as to rapidly change the maximum throughput throughout the course of a session.
-In addition, despite capacity augmentation work such as deployment of new generations or new bands of spectrum, capacity augmentation efforts are not keeping pace with growth in demand.
-These network operators have found it faster and less expensive to invest in shaping (also called throttling) of video traffic on a per-flow basis, which negatively affects video stream quality.
-This is done for both network management and business motivations.
-Network operators cannot explicitly measure the degradation to end user quality of experience (QoE) caused by traffic shaping, making this approach open loop.
+Many applications are capable of adjusting their bit rate based on
+network conditions and attempt to understand what bitrate is usable for
+a given network UDP 5-tuple. Some networks use rate-limiters to
+influence these applications. However, when networks enforce
+rate-limiters, applications like video streaming or conferencing
+struggle to adapt, leading to a suboptimal user experience.
 
-Video traffic usually employs adaptive bitrate (ABR) schemes to dynamically adjust the video quality (and thus the data rate) in response to changing network conditions.
-Ideally, when a network operator performs traffic shaping, the ABR scheme should adapt the video quality in use to reflect the data rate allowed by shaping, and converge on a bitrate allowed by the shaper.
-In practice this convergence is extremely difficult to achieve while maintaining a good user experience.
-Application providers are even designing algorithms to detect the presence of such traffic shapers and estimate the targeted shaping rate, however, these algorithms are likely to be both inaccurate and complex.
-Instead, it would be beneficial, for both the application provider and network operator, to signal network attributes to the application to self-adapt its video traffic to conform to the specified characteristics.
-The application provider has the ability to measure end user QoE and therefore can self-adapt with QoE feedback.
+This WG aims to establish a mechanism for devices intending to
+rate-limit a UDP 5-tuple to communicate the maximum allowable
+bitrate—termed "application limit"—to the endpoint originating the UDP
+5-tuple.
 
-The Secure Communication of Network Properties (SCONEPRO) Working Group's primary objective is to specify a 'maximum achievable throughput' property for QUIC-based streaming video and an on-path protocol for securely communicating this property from a network device to a client endpoint.
 
-The properties of this mechanism are as follows:
+## Goals
 
-1. Flow associativity.
-The network communicates applicable properties as they relate to specific QUIC connections. This ensures that applications can authorize and apply actions on a per-QUIC connection basis.
-1. Single communication channel for both client initiation and network properties.
-The communication channel is initiated by a client device, just as the end to end application flows are also typically initiated by a client. The same communication channel is used to provide network properties to the client.
-1. Network properties sent from the network.
-The network provides the properties to the client. The client might communicate with the network, but won't be providing network properties.
-1. On-path establishment.
-That is, no off-path element is needed to establish the communication channel between the entity communicating the properties and the client.
-1. Optionality.
-The communication channel is strictly optional for the functioning of application flows.
-A client's application flow must function even if the client does not establish the channel.
-1. Properties are not directives.
-A client is not mandated to act on properties received from the network, and the network is not mandated to act in conformance with the properties.
-1. Resilient to NAT rebinding, QUIC connection migration, and Multipath QUIC operation.
-The mechanism will allow the communication channel to be resilient to NAT rebinding, as long as the client is still served by the same logical Communication Service Provider (CSP). Additionally, the mechanism must work with flows that utilize QUIC connection migration or Multipath QUIC, and be able to distinguish network properties from two or more paths.
-1. Scalability.
-The mechanism must be scalable and implementable by Internet infrastructure as it exists today.
-1. Security.
-The mechanism will have the ability to invoke security mechanisms that provide confidentiality, integrity, and authenticity of the communication. The working group will consider the value and implications of different confidentiality modes of the communication.
+This work will define a way for an application to:
 
-The following topics are out of scope for SCONEPRO:
+1. Signal their ability to receive application limits for UDP 5-tuples
+to network elements.
 
-1. Support for streaming video flows carried in other transports and substrates than QUIC.
-1. Support for other media types that would require awareness of additional network attributes beyond the attributes applicable to ABR video.
-1. Support for general purpose network attributes. If additional network attributes are identified, the working group will request recharter to add them to SCONEPRO.
-1. Support for congestion signaling from the network. SCONEPRO should not be treated as mechanism to replace congestion control or rate adaptation.
+2. Receive notifications from network elements about the application
+limits for both upstream and downstream traffic.
 
-The working group will consider [RFC 9419](https://www.rfc-editor.org/rfc/rfc9419.html) as a source of principles in the development of this mechanism, and will consider relevant lessons from past IETF work in Path Aware Networking from [RFC 9049](https://www.rfc-editor.org/rfc/rfc9049.html).
+3. Allow network elements to update the application limit as needed.
 
-The working group will coordinate with other groups, both inside and outside the IETF, as work progresses. Some of these groups might be
-* WEBTRANS (in the IETF, which coordinates with W3C, responsible for browser specifications and APIs)
-* MOQ (producing a specification for streaming media over QUIC)
-* AVTCORE (producing an RTP-over-QUIC specification for real-time media)
-* MOPS (responsible for  discussion of video technology’s requirements of networking standards, as well as proposals for new uses of IP technology in video)
-* QUIC or HTTPbis, (if the working group identifies requirements for protocols used by SCONEPRO)
-* TSVWG and CCWG (if these working groups work on mechanisms that could be used in response to changes in SCONEPRO path properties)
+The application limit serves as a guideline to enhance user experience
+and represents the maximum bitrate manageable by a single network
+element. It is not an indicator of network congestion. This mechanism
+focuses on bitrate limits intended for adaptive bitrate applications and
+operates independently of congestion control algorithms and mechanisms
+like BBR, ECN, and L4S.
 
-The proposed deliverables for SCONEPRO are as follows:
+The working group will analyze the privacy and security implications of
+the solution.
 
-* Develop a standard track "SCONEPRO protocol" to securely communicate network information to clients.
-* Develop an Informational SCONEPRO Protocol Applicability and Manageability specification.
+### Non-Goals
+
+This working group will not produce a solution that: 
+
+1. Looks inside a QUIC or TLS encryption envelope
+
+2. Is appropriate for use as input to a congestion control algorithm
+
+3. Provides information other than the application limit 
+
+
+## Program of Work
+
+The WG is expected to:
+
+1. Develop a standards track protocol to communicate the maximum allowable
+bitrate—termed "application limit"—to the endpoint.  Develop an
+Informational Applicability and Manageability specification.
+
+2. The WG will work collaboratively with the WEBTRANS, MOQ, AVTCORE, MOPS,
+QUIC, TSVWG,and CCWG WGs as appropriate.
+
