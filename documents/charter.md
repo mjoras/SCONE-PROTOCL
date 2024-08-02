@@ -18,7 +18,7 @@ bitrate termed "application limit"—to the endpoint originating the UDP
 This work will define a way for an application to:
 
 1. Signal their ability to receive application limits for UDP 5-tuples
-to network elements.
+from network elements.
 
 2. Receive notifications from network elements about the application
 limits for both upstream and downstream traffic.
