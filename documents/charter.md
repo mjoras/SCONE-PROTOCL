@@ -7,11 +7,13 @@ influence these applications. However, when networks enforce
 rate-limiters, applications like video streaming or conferencing
 struggle to adapt, leading to a suboptimal user experience.
 
-This WG aims to establish a mechanism for devices intending to
+This WG aims to establish a mechanism for network devices intending to
 rate-limit a UDP 5-tuple to communicate an upper bound on achievable
 bitrate termed "application limit"—to the endpoint originating the UDP
-5-tuple.
+5-tuple. 
 
+In the context of this charter, a "network device" is defined as anything on 
+the path of a UDP 5-tuple that is capable of dropping or delaying packets.
 
 ## Goals
 
