@@ -15,17 +15,26 @@ bitrate termed "application limit"—to the endpoint originating the UDP
 In the context of this charter, a "network device" is defined as anything on 
 the path of a UDP 5-tuple that is capable of dropping or delaying packets.
 
+## Open Issues for Investigation
+
+The working group will investigate and determine the necessity of a "client
+conformance signaling" mechanism, that  allows clients to signal their receipt
+of the application limits and ability to conform to them, including impact to
+user privacy. This investigation will inform the decision on whether to include
+such a mechanism in the protocol.
+
+
 ## Goals
 
 This work will define a way for an application to:
 
-1. Signal their ability to receive application limits for UDP 5-tuples
-from network elements.
-
-2. Receive notifications from network elements about the application
+1. Receive notifications from network elements about the application
 limits for both upstream and downstream traffic.
 
-3. Allow network elements to update the application limit as needed.
+2. Allow network elements to update the application limit as needed.
+
+3. If deemed necessary, a client conformance signaling mechanism to allow clients
+to signal their receipt of application limits and ability to conform to them.
 
 The application limit serves as a guideline to enhance user experience
 and represents the maximum bitrate manageable by a single network
