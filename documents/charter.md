@@ -18,10 +18,10 @@ the path of a UDP 5-tuple that is capable of dropping or delaying packets.
 ## Open Issues for Investigation
 
 The working group will investigate and determine the necessity of a "client
-conformance signaling" mechanism, that  allows clients to signal their receipt
-of the application limits and ability to conform to them, including impact to
-user privacy. This investigation will inform the decision on whether to include
-such a mechanism in the protocol.
+conformance signaling" mechanism, that allows clients to signal their receipt
+of the application limits and ability to conform to them. This investigation
+will also assess the impact to user privacy. This investigation will inform
+the decision on whether to include such a mechanism in the protocol.
 
 
 ## Goals
