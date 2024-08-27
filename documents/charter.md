@@ -34,7 +34,7 @@ limits for both upstream and downstream traffic.
 2. Allow network elements to update the application limit as needed.
 
 3. If deemed necessary, a client conformance signaling mechanism to allow clients
-to signal their receipt of application limits and ability to conform to them.
+to signal their ability to receive application limits and/or conform to them.
 
 The application limit serves as a guideline to enhance user experience
 and represents the maximum bitrate manageable by a single network
