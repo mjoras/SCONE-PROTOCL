@@ -17,12 +17,11 @@ the path of a UDP 5-tuple that is capable of dropping or delaying packets.
 
 ## Open Issues for Investigation
 
-The working group will investigate and determine the necessity of a "client
-conformance signaling" mechanism, that allows clients to signal their receipt
-of the application limits and ability to conform to them. This investigation
-will also assess the impact to user privacy. This investigation will inform
-the decision on whether to include such a mechanism in the protocol.
-
+The working group will determine the necessity of a client signaling mechanism
+which; (1) signals their capability of receiving application limits, and (2)
+signals their receipt of application limits. The working group will also
+determine the mechanism’s impact on user privacy. These investigations will
+inform the decisions on whether to include such mechanisms in the protocol.
 
 ## Goals
 
@@ -32,9 +31,6 @@ This work will define a way for an application to:
 limits for both upstream and downstream traffic.
 
 2. Allow network elements to update the application limit as needed.
-
-3. If deemed necessary, a client conformance signaling mechanism to allow clients
-to signal their receipt of application limits and ability to conform to them.
 
 The application limit serves as a guideline to enhance user experience
 and represents the maximum bitrate manageable by a single network
