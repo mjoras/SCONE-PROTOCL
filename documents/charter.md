@@ -18,8 +18,8 @@ the path of a UDP 5-tuple that is capable of dropping or delaying packets.
 ## Open Issues for Investigation
 
 The working group will determine the necessity of a client signaling mechanism
-which; (1) signals their capability of receiving application limits, and (2)
-signals their receipt of application limits. The working group will also
+which might separately signal their capability of receiving application limits
+and their receipt of application limits. The working group will also
 determine the mechanism’s impact on user privacy. These investigations will
 inform the decisions on whether to include such mechanisms in the protocol.
 
