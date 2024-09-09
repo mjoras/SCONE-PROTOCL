@@ -14,9 +14,9 @@ rate-limit a UDP 5-tuple to communicate an upper bound on achievable
 bitrate termed "throughput advice" — to the endpoint originating the UDP
 5-tuple. 
 
-This mechanism will allow an application to receive notifications from network elements, a "network element" is defined as anything on 
-the path of a UDP 5-tuple that is capable of dropping or delaying packets, containing throughput
-advice for both upstream and downstream traffic.
+This mechanism will allow an application to receive notifications containing throughput
+advice for both upstream and downstream traffic from any network elements capable of dropping or delaying packets on 
+the path of a UDP 5-tuple.
 
 The throughput advice serves as a guideline to enhance user experience
 and represents the maximum bitrate manageable by a single network
