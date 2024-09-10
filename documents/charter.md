@@ -54,3 +54,5 @@ achievable bitrate — termed "throughput advice"— to the endpoint.
 
 The WG will work collaboratively with the WEBTRANS, MOQ, AVTCORE, MOPS,
 QUIC, TSVWG,and CCWG WGs as appropriate.
+
+The WG will coordinate its work with owners of any APIs that use SCONEPRO in order to ensure that browser applications will be able to use SCONEPRO effectively, but no work on APIs will be carried out in the working group. 
