@@ -24,7 +24,7 @@ The proponents believe that a new working group is required. This is a follow up
 ## Agenda
 - Ideally will be the first working group meeting.
 - Will be formulated with chairs.
-- Focus on review of work since IETF 129 and the working charter, with discussion and AD questions.
+- Focus on review of work since IETF 120 and the working charter, with discussion and AD questions.
 
 ## Links to the mailing list, draft charter if any, relevant Internet-Drafts, etc.
    - Mailing List: https://www.ietf.org/mailman/listinfo/sadcdn
