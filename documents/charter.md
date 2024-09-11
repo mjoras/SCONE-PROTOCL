@@ -31,6 +31,8 @@ the mechanism.
 
 In order to achieve the goals listed above, the working group will determine whether it is necessary for an endpoint to explicitly signal its capability of receiving throughput advice, and whether it is necessary for an endpoint to confirm its receipt of throughput advice.
 
+The working group may focus on solutions that depend on QUIC as a substrate.
+
 In the context of this charter, a "network element" is defined as anything on 
 the path of a UDP 5-tuple that is capable of dropping or delaying packets.
 
