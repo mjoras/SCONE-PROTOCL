@@ -33,6 +33,7 @@ In order to achieve the goals listed above, the working group will determine whe
 
 In the context of this charter, a "network element" is defined as anything on 
 the path of a UDP 5-tuple that is capable of dropping or delaying packets.
+The working group will initial focus on developing a solution for QUIC.
 
 ### Non-Goals
 
