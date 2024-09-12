@@ -32,6 +32,8 @@ the mechanism.
 
 In order to achieve the goals listed above, the working group will determine whether it is necessary for an endpoint to explicitly signal its capability of receiving throughput advice, and whether it is necessary for an endpoint to confirm its receipt of throughput advice.
 
+The working group will initially focus on developing a solution for QUIC.
+
 ### Non-Goals
 
 This working group will not produce a solution that: 
