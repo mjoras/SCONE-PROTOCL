@@ -42,7 +42,9 @@ This working group will not produce a solution that:
 
 2. Is appropriate for use as input to a congestion control algorithm
 
-3. Provides information other than the throughput advice 
+3. Provides information other than the throughput advice
+
+4. Signals throughput advice out of band
 
 ## Program of Work
 
