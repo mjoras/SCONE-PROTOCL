@@ -11,7 +11,7 @@ struggle to adapt, leading to a suboptimal user experience.
 
 This WG aims to establish a mechanism for network elements intending to
 rate-limit a UDP 5-tuple to communicate an upper bound on achievable
-bitrate termed "throughput advice" — to the endpoint originating the UDP
+bitrate termed "throughput advice" to the endpoint originating the UDP
 5-tuple.
 
 This mechanism will allow an application to receive notifications
