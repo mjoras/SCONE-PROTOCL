@@ -9,8 +9,8 @@ struggle to adapt, leading to a suboptimal user experience.
 
 ## Goals
 
-This WG aims to establish a mechanism for network elements intending to
-rate-limit a UDP 5-tuple to communicate an upper bound on achievable
+This WG aims to establish a mechanism for network elements capable of
+rate-limiting a UDP 5-tuple to communicate an upper bound on achievable
 bitrate termed "throughput advice" to the sender of packets matching 
 the UDP 5-tuple.
 
