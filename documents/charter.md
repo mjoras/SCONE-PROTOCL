@@ -2,7 +2,7 @@
 
 Many applications are capable of adjusting their bit rate based on
 network conditions and attempt to understand what bitrate is usable for
-a given network UDP 5-tuple. Some networks use rate-limiters to
+a given network UDP 4-tuple. Some networks use rate-limiters to
 influence these applications. However, when networks enforce
 rate-limiters, applications like video streaming or conferencing
 struggle to adapt, leading to a suboptimal user experience.
@@ -10,14 +10,14 @@ struggle to adapt, leading to a suboptimal user experience.
 ## Goals
 
 This WG aims to establish a mechanism for network elements capable of
-rate-limiting a UDP 5-tuple to communicate an upper bound on achievable
+rate-limiting a UDP 4-tuple to communicate an upper bound on achievable
 bitrate termed "throughput advice" to the sender of packets matching 
-the UDP 5-tuple.
+the UDP 4-tuple.
 
 This mechanism will allow an application to receive notifications
 containing throughput advice for both upstream and downstream traffic
 from any network elements capable of dropping or delaying packets on the
-path of a UDP 5-tuple.
+path of a UDP 4-tuple.
 
 The throughput advice serves as a guideline to enhance user experience
 and represents the maximum bitrate manageable by a single network
