@@ -50,8 +50,6 @@ This working group will not produce a solution that:
 
 3. Provides information other than the throughput advice
 
-4. Signals throughput advice out of band
-
 ## Program of Work
 
 The WG is expected to:
@@ -67,6 +65,12 @@ The WG will work collaboratively with the WEBTRANS, MOQ, AVTCORE, MOPS,
 QUIC, TSVWG,and CCWG WGs as appropriate.
 
 The WG will coordinate its work with owners of any APIs that use
-SCONEPRO in order to ensure that browser applications will be able to
-use SCONEPRO effectively, but no work on APIs will be carried out in the
+the "throughput advice" in order to ensure that browser applications will be able to
+use SCONE protocol effectively, but no work on APIs will be carried out in the
 working group.
+
+## Milestones
+
+- Submit a standards track protocol to communicate "throughput advice"— from network elements
+to the endpoint to the IESG for publication by end of 2025.
+- Submit an informational documentation of Applicability and Manageability for SCONE protocol to the IESG for publication by the end of 2025. 
